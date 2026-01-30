@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Résumé JavaScript – Appel des fonctions</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    h1, h2 { color: #2c3e50; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #333; padding: 8px; }
+    th { background-color: #f0f0f0; }
+    pre { background: #f8f8f8; padding: 10px; }
+    .btn{
+        background-color: #138da9;
+        text-align: center;
+        color: black;
+        border-radius:10px;
+        font-family: Arial, Helvetica, sans-serif;
+        transform: all 0.5s;
+        margin-left: 650px;
+        width: 300px;
+        height: 300px;
+        font-size: 20px;
+    }
+    a{
+        text-decoration: none;
+        font-size: 20px;
+    }
+  </style>
+  <link rel="icon" href="JavaScript-logo.png">
+</head>
+<body>
+
+<h1>Résumé JavaScript – Appel des fonctions</h1>
+
+<h2>1. JavaScript</h2>
+<p>
+JavaScript est un langage de programmation pour le web.  
+Il rend les pages HTML interactives après leur chargement.
+</p>
+
+<h2>2. Où écrire le JavaScript ?</h2>
+<ul>
+  <li>Dans la balise <code>&lt;head&gt;</code></li>
+  <li>Dans la balise <code>&lt;body&gt;</code></li>
+  <li>Dans un fichier externe <code>.js</code></li>
+</ul>
+
+<pre>
+&lt;script src="script.js"&gt;&lt;/script&gt;
+</pre>
+
+<h2>3. Déclaration d’une fonction</h2>
+<pre>
+function direBonjour() {
+  alert("Bonjour");
+}
+</pre>
+
+<h2>4. Types d’appel des fonctions</h2>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Rôle</th>
+    <th>Exemple</th>
+  </tr>
+  <tr>
+    <td>onclick</td>
+    <td>Clic souris</td>
+    <td>&lt;button onclick="f()"&gt;</td>
+  </tr>
+  <tr>
+    <td>onload</td>
+    <td>Chargement page</td>
+    <td>&lt;body onload="f()"&gt;</td>
+  </tr>
+  <tr>
+    <td>onsubmit</td>
+    <td>Envoi formulaire</td>
+    <td>&lt;form onsubmit="f()"&gt;</td>
+  </tr>
+  <tr>
+    <td>onmouseover</td>
+    <td>Survol souris</td>
+    <td>&lt;div onmouseover="f()"&gt;</td>
+  </tr>
+  <tr>
+    <td>onchange</td>
+    <td>Changement valeur</td>
+    <td>&lt;input onchange="f()"&gt;</td>
+  </tr>
+  <tr>
+    <td>addEventListener</td>
+    <td>Bonne pratique</td>
+    <td>element.addEventListener("click", f)</td>
+  </tr>
+  <tr>
+    <td>setTimeout</td>
+    <td>Appel différé</td>
+    <td>setTimeout(f, 1000)</td>
+  </tr>
+  <tr>
+    <td>setInterval</td>
+    <td>Appel répété</td>
+    <td>setInterval(f, 1000)</td>
+  </tr>
+</table>
+<a href="test.html" class="btn">clicker ici pour les tester</a>
+<h2>5. Accès aux éléments HTML</h2>
+<pre>
+document.getElementById("id").value
+document.getElementById("id").checked
+document.getElementById("id").selectedIndex
+</pre>
+
+<h2>Phrase clé pour l’examen</h2>
+<p><b>
+Une fonction JavaScript peut être appelée par un événement HTML,
+par JavaScript directement ou automatiquement.
+</b></p>
+
+</body>
+</html>
