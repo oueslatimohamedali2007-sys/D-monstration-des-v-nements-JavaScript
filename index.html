@@ -2,24 +2,32 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>JavaScript – Résumé Examen</title>
+  <title>JavaScript – Résumé Examen Détaillé</title>
 
   <style>
     body {
       font-family: Arial, sans-serif;
-      padding: 25px;
-      line-height: 1.6;
+      padding: 30px;
+      line-height: 1.7;
+      background-color: #ffffff;
     }
 
     h1 {
       text-align: center;
       color: #1e3a5f;
+      margin-bottom: 30px;
     }
 
     h2 {
       color: #2c3e50;
+      margin-top: 35px;
       border-bottom: 2px solid #ccc;
       padding-bottom: 5px;
+    }
+
+    h3 {
+      color: #138da9;
+      margin-top: 20px;
     }
 
     table {
@@ -30,39 +38,57 @@
 
     th, td {
       border: 1px solid #333;
-      padding: 8px;
+      padding: 10px;
       text-align: center;
     }
 
     th {
-      background-color: #eaeaea;
+      background-color: #f0f0f0;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    pre {
+      background-color: #f8f8f8;
+      padding: 12px;
+      border-left: 4px solid #138da9;
+      overflow-x: auto;
     }
 
     .important {
-      background: #f8f8f8;
-      border-left: 4px solid #138da9;
-      padding: 10px;
-      margin: 15px 0;
+      background-color: #f9f9f9;
+      border-left: 5px solid #e67e22;
+      padding: 12px;
+      margin: 20px 0;
       font-weight: bold;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 12px 25px;
-      background-color: #138da9;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-size: 18px;
+    .exam {
+      background-color: #eef6ff;
+      border-left: 5px solid #2575fc;
+      padding: 12px;
+      margin: 20px 0;
     }
 
     .center {
       text-align: center;
+      margin-top: 40px;
+    }
+
+    .btn {
+      padding: 14px 30px;
+      background-color: #138da9;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-size: 18px;
+      font-weight: bold;
     }
 
     code {
-      background: #f0f0f0;
+      background-color: #eee;
       padding: 2px 6px;
     }
   </style>
@@ -72,60 +98,97 @@
 
 <body>
 
-<h1>📘 JavaScript – Résumé pour l’examen</h1>
+<h1>📘 JavaScript – Résumé COMPLET pour l’Examen</h1>
 
-<h2>1. Définition</h2>
+<h2>1. Définition de JavaScript</h2>
 <p>
-<strong>JavaScript</strong> est un langage de programmation utilisé pour rendre
-les pages web <strong>dynamiques et interactives</strong>.
+<strong>JavaScript</strong> est un langage de programmation utilisé dans les pages web
+pour rendre le contenu <strong>interactif</strong>.
 </p>
 
-<div class="important">
-JavaScript s’exécute dans le navigateur après le chargement de la page.
-</div>
-
-<h2>2. Où écrire le JavaScript ?</h2>
 <ul>
-  <li>Dans la balise <code>&lt;head&gt;</code></li>
-  <li>Dans la balise <code>&lt;body&gt;</code></li>
-  <li>Dans un fichier externe <code>.js</code></li>
+  <li>Il s’exécute dans le <strong>navigateur</strong></li>
+  <li>Il agit sur le <strong>HTML</strong> et le <strong>CSS</strong></li>
+  <li>Il réagit aux actions de l’utilisateur</li>
 </ul>
 
-<h2>3. Fonction JavaScript</h2>
+<div class="exam">
+📌 <strong>Réponse type examen :</strong><br>
+JavaScript est un langage de programmation qui permet de créer
+des pages web dynamiques et interactives.
+</div>
 
-<p><strong>Déclaration :</strong></p>
+---
+
+<h2>2. Où écrire le JavaScript ?</h2>
+
+<h3>2.1 Dans le HTML</h3>
+<ul>
+  <li>Dans <code>&lt;head&gt;</code></li>
+  <li>Dans <code>&lt;body&gt;</code></li>
+</ul>
+
+<h3>2.2 Dans un fichier externe</h3>
 <pre>
-function maFonction() {
-  // instructions
+&lt;script src="script.js"&gt;&lt;/script&gt;
+</pre>
+
+<div class="important">
+👉 La meilleure pratique est d’utiliser un fichier <code>.js</code>
+pour séparer le code HTML et JavaScript.
+</div>
+
+---
+
+<h2>3. Les fonctions en JavaScript</h2>
+
+<h3>3.1 Déclaration</h3>
+<pre>
+function direBonjour() {
+  alert("Bonjour");
 }
 </pre>
 
-<p><strong>Appel :</strong></p>
+<h3>3.2 Appel de fonction</h3>
 <pre>
-maFonction();
+direBonjour();
 </pre>
 
-<h2>4. Appel des fonctions par événements</h2>
+<div class="exam">
+📌 Une fonction est un bloc de code réutilisable
+qui s’exécute lorsqu’elle est appelée.
+</div>
+
+---
+
+<h2>4. Les événements JavaScript</h2>
+
+<p>
+Un <strong>événement</strong> est une action détectée par le navigateur :
+clic, chargement, saisie clavier, etc.
+</p>
+
+<h3>4.1 Tableau des événements importants</h3>
 
 <table>
   <tr>
     <th>Événement</th>
-    <th>Déclenchement</th>
+    <th>Quand ?</th>
     <th>Exemple</th>
   </tr>
   <tr>
     <td>onclick</td>
-    <td>Clic souris</td>
+    <td>Clic sur un élément</td>
     <td>&lt;button onclick="f()"&gt;</td>
   </tr>
   <tr>
     <td>onload</td>
-    <td>Chargement page</td>
+    <td>Chargement de la page</td>
     <td>&lt;body onload="f()"&gt;</td>
   </tr>
   <tr>
     <td>onsubmit</td>
-    <td>Envoi formulaire</td>
+    <td>Soumission formulaire</td>
     <td>&lt;form onsubmit="f()"&gt;</td>
   </tr>
   <tr>
@@ -140,7 +203,13 @@ maFonction();
   </tr>
 </table>
 
-<h2>5. Méthodes importantes</h2>
+<div class="important">
+👉 Les événements permettent d’appeler des fonctions automatiquement.
+</div>
+
+---
+
+<h2>5. Méthodes JavaScript importantes</h2>
 
 <table>
   <tr>
@@ -149,19 +218,25 @@ maFonction();
   </tr>
   <tr>
     <td>addEventListener()</td>
-    <td>Ajouter un événement (bonne pratique)</td>
+    <td>Associer un événement (bonne pratique)</td>
   </tr>
   <tr>
     <td>setTimeout()</td>
-    <td>Exécuter une fonction après un délai</td>
+    <td>Appeler une fonction après un délai</td>
   </tr>
   <tr>
     <td>setInterval()</td>
-    <td>Exécuter une fonction de façon répétée</td>
+    <td>Appeler une fonction à intervalles réguliers</td>
   </tr>
 </table>
 
-<h2>6. Accès aux éléments HTML</h2>
+---
+
+<h2>6. Accès aux éléments HTML (DOM)</h2>
+
+<p>
+JavaScript peut lire et modifier les éléments HTML grâce au DOM.
+</p>
 
 <pre>
 document.getElementById("id").value
@@ -169,23 +244,25 @@ document.getElementById("id").checked
 document.getElementById("id").selectedIndex
 </pre>
 
+<div class="exam">
+📌 Le DOM permet à JavaScript de manipuler les éléments HTML.
+</div>
+
+---
+
+<h2>7. Phrase clé pour l’examen</h2>
+
 <div class="important">
 Une fonction JavaScript peut être appelée :
 <ul>
   <li>par un événement HTML</li>
-  <li>directement en JavaScript</li>
-  <li>automatiquement (timer, chargement)</li>
+  <li>directement par JavaScript</li>
+  <li>automatiquement (onload, timer)</li>
 </ul>
 </div>
 
-<h2>Phrase clé à retenir</h2>
-<div class="important">
-👉 JavaScript permet de répondre aux actions de l’utilisateur
-grâce aux événements.
-</div>
-
 <div class="center">
-  <a href="test.html" class="btn">➡️ Tester les événements</a>
+  <a href="test.html" class="btn">➡️ Tester les événements JavaScript</a>
 </div>
 
 </body>
